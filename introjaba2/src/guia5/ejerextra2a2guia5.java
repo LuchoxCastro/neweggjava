@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Hogar
  */
-public class ejerextra2n2guia5 {
+public class ejerextra2a2guia5 {
 
     /**
      * @param args the command line arguments
