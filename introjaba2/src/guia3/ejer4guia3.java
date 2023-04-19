@@ -23,7 +23,7 @@ public class ejer4guia3 {
          System.out.println("ingrese una frase");
          String frase = leer.nextLine() ; 
          
-         if(frase.Substrings(0,1).equalsIgnoreCase("String")){
+         if(frase.substring(0,1).equalsIgnoreCase("String")){
              System.out.println("la frase es incorrecta");
              
          }else{ 
