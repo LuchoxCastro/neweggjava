@@ -5,6 +5,8 @@
  */
 package ejerextra3poo;
 
+import juegoentidades.Juego;
+
 /**
  *
  * @author Hogar
