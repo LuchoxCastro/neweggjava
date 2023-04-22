@@ -8,36 +8,37 @@ package CuentaBservice;
 import cuentabanentidades.CuentaBancaria;
 import java.util.Scanner;
 
-
 /**
  *
  * @author Hogar
  */
 public class CuentaBanservice {
 
-Scanner leer = new Scanner(System.in);
+    Scanner leer = new Scanner(System.in);
     private CuentaBancaria cuenta;
     private Object numeroCuenta;
 
-    public void crearCuenta() {
+    public CuentaBancaria crearCuenta(int numeroCuenta, long dniCliente, double saldoActual) {
 
-        
         //System.out.println("Creación de Cuenta Bancaria");
         System.out.print("Ingrese el número de cuenta: ");
-        int numeroCuenta = leer.nextInt();
+        numeroCuenta = leer.nextInt();
         System.out.print("Ingrese el DNI del cliente: ");
-        long dniCliente = leer.nextLong();
+        dniCliente = leer.nextLong();
         System.out.print("Ingrese el saldo actual: ");
-        double saldoActual = leer.nextDouble();
+        saldoActual = leer.nextDouble();
         cuenta = new CuentaBancaria(numeroCuenta, dniCliente, saldoActual);
         System.out.println("Cuenta creada exitosamente");
+        return cuenta;
     }
-    
-    public void ingresar(double cantidad) {
-        cuenta.setSaldoActual(cantidad+cuenta.getSaldoActual());
+
+    public void ingresar(CuentaBancaria cuenta, double cantidad) {
+        cuenta.setSaldoActual(cantidad + cuenta.getSaldoActual());
         System.out.println("Ingreso de $" + cantidad + " realizado correctamente");
+        cuenta.setSaldoActual(cantidad);
+
     }
-    
+
     public void retirar(double cantidad) {
         if (cantidad > cuenta.getSaldoActual()) {
             cantidad = cuenta.getSaldoActual();
@@ -45,8 +46,7 @@ Scanner leer = new Scanner(System.in);
         cuenta.setSaldoActual(cuenta.getSaldoActual() - cantidad);
         System.out.println("Retiro de $" + cantidad + " realizado correctamente");
     }
-    
-    
+
     public void extraccionRapida() {
         double saldoActual = cuenta.getSaldoActual();
         double cantidadMaxima = saldoActual * 0.2;
@@ -59,12 +59,10 @@ Scanner leer = new Scanner(System.in);
             System.out.println("Extracción rápida realizada correctamente");
         }
     }
-    
-    
+
     public void consultarSaldo() {
         System.out.println("Saldo actual: $" + cuenta.getSaldoActual());
     }
-    
 
     public void consultarDatos() {
         System.out.println("Número de cuenta: " + cuenta.getNumeroCuenta());
