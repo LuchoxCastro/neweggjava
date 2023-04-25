@@ -26,12 +26,12 @@ public class Ejer2guia8 {
 
         System.out.println("bienvenido a la cafetera");
 
-        cafe.llenarCafetera(500, 1000);
-        cafe.servirTaza(1000);
-        cafe.vaciarCafetera();
+        cafe.llenarCafetera(realcapmax);
+        cafe.servirTaza(500);
+
         cafe.agregarCafe(realcapmax);
         System.out.println("al fin termino, ya puede retirar su cafe");
-
+        cafe.vaciarCafetera();
     }
 
 }

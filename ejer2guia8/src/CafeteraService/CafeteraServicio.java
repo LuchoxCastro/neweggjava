@@ -22,45 +22,48 @@ import java.util.Scanner;
  */
 public class CafeteraServicio {
 
-  private   Scanner leer = new Scanner(System.in);
+    private Scanner leer = new Scanner(System.in);
     Cafetera c2 = new Cafetera();
-            
+
     private int actual;
     private int capacidad;
-    public Cafetera realcapmax(){
-        System.out.println("ingrese cuanto desea de cafe ");
-        int realcapmax = leer.nextInt();
+
+    public Cafetera realcapmax() {
+        System.out.println(" ingrese la capacidad de la cafetera  ");
+        c2.setCapacidadMaxima(leer.nextInt());
+        // int realcapmax = leer.nextInt();
         return c2;
     }
-    
-    public void llenarCafetera(int actual, int capacidad) {
-       c2.setCantidadActual(c2.getCapacidadMaxima());
+
+    public void llenarCafetera(Cafetera c2) {
+        System.out.println("se lleno la cafetera");
+        c2.setCantidadActual(c2.getCapacidadMaxima());
+
     }
 
+    public void servirTaza(int tamanoTaza) {
 
-     public void servirTaza(int tamanoTaza){
-        
-        if(c2.getCantidadActual()<tamanoTaza){
-             System.out.println("No se pudo llenar la taza completamente, quedó con " + c2.getCantidadActual() + " ml de café.");
-             c2.setCantidadActual(c2.getCapacidadMaxima());
-        }else{
-            System.out.println("Se lleno la taza");
+        if (c2.getCantidadActual() < tamanoTaza) {
+            System.out.println("No se pudo llenar la taza completamente, quedó con " + c2.getCantidadActual() + " ml de café.");
+            c2.setCantidadActual(0);
+        } else {
             c2.setCantidadActual(c2.getCantidadActual() - tamanoTaza);
+            System.out.println("Se lleno la taza y la cafetera quedo con " + c2.getCantidadActual() + " ml de cafe");
+
+        }
+    }
+    //Método vaciarCafetera(): pone la cantidad de café actual en cero. 
+
+    public void vaciarCafetera() {
+        System.out.println("se vacio la cafetera");
+        c2.setCantidadActual(0);
+    }
+
+    public void agregarCafe(Cafetera c2) {
+        System.out.println("cuanto cafe desea cargar?");
+        int sumarcafe = leer.nextInt();
+
+        c2.setCantidadActual(c2.getCantidadActual() + sumarcafe);
+        System.out.println("quedo de cafe "+ c2.getCantidadActual()+" ml de cafe" );
+    }
 }
-}   
-      //Método vaciarCafetera(): pone la cantidad de café actual en cero. 
-
-     public void vaciarCafetera(){
-         c2.setCantidadActual(0);
-     }
-     public void agregarCafe(Cafetera c2){
-         System.out.println("cuanto cafe desea cargar?");
-         int sumarcafe = leer.nextInt();
-         
-         c2.setCantidadActual(c2.getCantidadActual()+ sumarcafe );
-             
-         }
-     }
-     
-    
-
