@@ -17,7 +17,13 @@ public class PersonaService {
     Scanner leer = new Scanner(System.in);
 
     public boolean esMayorDeEdad(Persona Persona) {
+    
+        if (Persona.getEdad()>= 18 ) {
+            System.out.println(Persona.getNombre()+" es mayor de edad ");
+            
+        }else System.out.println(Persona.getNombre()+" es menor de edad");
         return Persona.getEdad() >= 18;
+        
     }
 
     public Persona crearPersona() {
@@ -45,17 +51,17 @@ public class PersonaService {
     }
 
     public int calcularIMC(Persona Persona) {
-        int imc = (int) (Persona.getPeso() / Math.pow(Persona.getAltura(), 2));
+        int imc = (int) (Persona.getPeso() /( Math.pow ((double)Persona.getAltura()/100, 2)));
 
         if (imc < 20) {
-            System.out.println(Persona.getNombre() + "esta por debajo de su peso ideal");
+            System.out.println(Persona.getNombre() + " esta por debajo de su peso ideal");
             return -1;
         } else if (imc > 25) {
-            System.out.println(Persona.getNombre() + "esta con sobre peso");
+            System.out.println(Persona.getNombre() + " esta con sobre peso");
             return 1;
 
         } else {
-            System.out.println(Persona.getNombre() + "se encuentra en su peso ideal");
+            System.out.println(Persona.getNombre() + " se encuentra en su peso ideal");
 
             return 0;
         }

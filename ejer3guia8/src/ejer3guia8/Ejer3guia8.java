@@ -1,6 +1,8 @@
+package ejer3guia8;
 
 import PersonaServicio.PersonaService;
 import Personaentidades.Persona;
+import java.util.Scanner;
 
 /*
  * Realizar una clase llamada Persona en el paquete de entidades que
@@ -41,14 +43,22 @@ public class Ejer3guia8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     
-        PersonaService p1 = new PersonaService();
-      Persona  persona1  = p1.crearPersona();
-      p1.esMayorDeEdad(persona1);
-      p1.calcularIMC(persona1);
-              
-        
+        int n;
+        Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese la cantidad de personas a encuestar");
+        n = leer.nextInt();
+        PersonaService persona = new PersonaService();
+        Persona[] personas = new Persona[n];
+        int[] resultadosIMC = new int[n];
+        boolean[] mayoresDeEdad = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
+            personas[i] = persona.crearPersona();
+            persona.calcularIMC(personas[i]);
+            persona.esMayorDeEdad(personas[i]);
+            persona.mostrarPersona(personas[i]);
+        }
 
     }
-    
+
 }
