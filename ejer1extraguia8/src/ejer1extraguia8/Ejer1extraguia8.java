@@ -7,6 +7,7 @@ package ejer1extraguia8;
 
 import RaicesServicio.RaicesService;
 import java.util.Scanner;
+import raicesentidades.Raices;
 
 /**
  *
@@ -29,20 +30,10 @@ public class Ejer1extraguia8 {
         System.out.print("c = ");
         c = sc.nextDouble();
 
-        RaicesService servicio = new RaicesService(a, b, c);
+        RaicesService servicio = new RaicesService();
+        Raices planta = new Raices(a, b, c);
 
-        double discriminante = servicio.getDiscriminante();
-        boolean tieneRaices = servicio.tieneRaices();
-        boolean tieneRaiz = servicio.tieneRaiz();
-
-        if (tieneRaices) {
-            System.out.println("La ecuación tiene dos raíces: ");
-            servicio.obtenerRaices();
-        } else if (tieneRaiz) {
-            System.out.println("La ecuación tiene una única raíz: ");
-            servicio.obtenerRaiz();
-        } else {
-            System.out.println("La ecuación no tiene solución.");
-        }
+        System.out.println("el discriminante es  " + servicio.getDiscriminante(planta));
+        servicio.calcular(planta);
     }
 }
