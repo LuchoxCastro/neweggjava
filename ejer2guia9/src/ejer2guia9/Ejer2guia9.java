@@ -6,6 +6,7 @@
 package ejer2guia9;
 
 import ParServicio.ParService;
+import entidadespar.ParDeNumeros;
 
 /**
  *
@@ -17,10 +18,16 @@ public class Ejer2guia9 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-ParService PS = new ParService ();
+        ParService PS = new ParService();
+        ParDeNumeros pdn = PS.crearPares();
 
+        PS.mostrarValores(pdn);
+        PS.devolverMayor(pdn);
+        PS.calcularPotencia(pdn);
+        PS.calculaRaiz(pdn);
 
-
+        
+        
+    }
     
-}
 }

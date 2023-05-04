@@ -14,7 +14,7 @@ valores. Antes de calcular la raíz cuadrada se debe obtener el valor absoluto d
 *
 
 
-*/
+ */
 package ParServicio;
 
 import entidadespar.ParDeNumeros;
@@ -24,31 +24,40 @@ import entidadespar.ParDeNumeros;
  * @author Hogar
  */
 public class ParService {
-    public ParDeNumeros crearPares(){
+
+    public ParDeNumeros crearPares() {
         return new ParDeNumeros();
-       
+
+    }
+
+    public void mostrarValores(ParDeNumeros pdn) {
+        System.out.println(pdn.toString());
+
+    }
+
+    public double devolverMayor(ParDeNumeros pdn) {
+        double Mayor = 0;
+        
+       Mayor = Math.max(pdn.getPar1(), pdn.getPar2());
+        return Mayor;
+    }
+
+    public double calcularPotencia(ParDeNumeros pdn) {
+        double mayor = 0;
+        double menor = 0;
+
+        mayor = devolverMayor(pdn);
+        menor = Math.min(pdn.getPar1(),pdn.getPar2());
+        mayor = Math.round(devolverMayor(pdn));
+        menor = Math.round(menor);
+        return Math.pow(mayor, menor);
         
     }
-   public void mostrarValores(ParDeNumeros pdn){
-       System.out.println(pdn.toString()
-       );
-    
-}
-     public double devolverMayor(ParDeNumeros pdn){
-        return  Math.max(pdn.getPar1(), pdn.getPar2());
-     }
-          
-   public double calcularPotencia(ParDeNumeros pdn) {
-            double mayor = devolverMayor(pdn);
-            double menor = Math.min(pdn.getPar1(), pdn.getPar2());
-            mayor = Math.round(mayor);
-            menor = Math.round(menor);
-            return Math.pow(mayor, menor);
-}
-   public double calculaRaiz(ParDeNumeros pdn ) {
-            double menor = Math.min(Math.abs(pdn.getPar1()), Math.abs(pdn.getPar2()));
-            return Math.sqrt(menor);
-            
-        }
-}
 
+    public double calculaRaiz(ParDeNumeros pdn) {
+
+        double menor = Math.min(Math.abs(pdn.getPar1()), Math.abs(pdn.getPar2()));
+        return Math.sqrt(menor);
+
+    }
+}

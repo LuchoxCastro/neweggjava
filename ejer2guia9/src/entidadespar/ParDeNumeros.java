@@ -15,8 +15,8 @@ public class ParDeNumeros {
     private double par2;
 
     public ParDeNumeros() {
-        par1 = (Math.random()*200)-100 ;
-        par2 = (Math.random()*200) -100 ;
+        par1 = (Math.random()*20)-20;
+        par2 = (Math.random()*20)-20;
     }
 
     public double getPar1() {
@@ -33,6 +33,11 @@ public class ParDeNumeros {
 
     public void setPar2(double par2) {
         this.par2 = par2;
+    }
+
+    @Override
+    public String toString() {
+        return "ParDeNumeros{" + "par1=" + par1 + ", par2=" + par2 + '}';
     }
 
 }
