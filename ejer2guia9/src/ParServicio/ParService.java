@@ -36,28 +36,28 @@ public class ParService {
     }
 
     public double devolverMayor(ParDeNumeros pdn) {
-        double Mayor = 0;
+        //double Mayor = 0;
         
-       Mayor = Math.max(pdn.getPar1(), pdn.getPar2());
+     double  Mayor = Math.max(pdn.getPar1(), pdn.getPar2());
         return Mayor;
     }
 
     public double calcularPotencia(ParDeNumeros pdn) {
-        double mayor = 0;
-        double menor = 0;
+       // double mayor = 0;
+        //double menor = 0;
 
-        mayor = devolverMayor(pdn);
-        menor = Math.min(pdn.getPar1(),pdn.getPar2());
+       double mayor = devolverMayor(pdn);
+       double menor = Math.min(pdn.getPar1(),pdn.getPar2());
         mayor = Math.round(devolverMayor(pdn));
         menor = Math.round(menor);
         return Math.pow(mayor, menor);
         
     }
 
-    public double calculaRaiz(ParDeNumeros pdn) {
+    public static void calculaRaiz(ParDeNumeros pdn) {
 
         double menor = Math.min(Math.abs(pdn.getPar1()), Math.abs(pdn.getPar2()));
-        return Math.sqrt(menor);
+        System.out.println("resutado de la raiz cuadrada es  "+ Math.sqrt(menor));
 
     }
 }
