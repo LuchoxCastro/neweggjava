@@ -20,7 +20,7 @@ public class PersonaService {
         String nombre = leer.nextLine();
 
         System.out.println("ingrese la fecha de nacimiento (formato: dd/mm/yyyy:))");
-        strimg fexhastring = leer.nextLine();
+        string fechaNacimiento  = leer.nextLine();
         
     }
 }
