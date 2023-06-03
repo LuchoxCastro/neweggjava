@@ -5,8 +5,9 @@
  */
 package ejer1guia11;
 
+import PersonaServicio.PersonaService;
 import entidades.Perro;
-import entidades.Persona;
+
 import java.util.ArrayList;
 
 /**
@@ -20,6 +21,8 @@ public class Ejer1guia11 {
      */
     public static void main(String[] args) {
          ArrayList<Perro> perros = new ArrayList<>();
+         PersonaService puente = new PersonaService();
+         puente.crearPersona();
        
       
 

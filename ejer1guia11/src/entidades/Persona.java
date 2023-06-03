@@ -10,6 +10,11 @@ package entidades;
  * @author Hogar
  */
 public class Persona {
+  private final String nombre;
+    private final String apellido;
+    private final int edad;
+    private final int dni;
+    private final String perro;
 
     public Persona(String nombre, String apellido, int edad, int dni, String perro) {
         this.nombre = nombre;
@@ -19,12 +24,7 @@ public class Persona {
         this.perro = perro;
     }
 
-    private final String nombre;
-    private final String apellido;
-    private final int edad;
-    private final int dni;
-    private final String perro;
-
+  
     public Persona() {
     }
     
