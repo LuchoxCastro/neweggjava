@@ -44,27 +44,30 @@ public class Revolver {
     public String toString() {
         return "Revolver{" + "posactual=" + posactual + ", posagua=" + posagua + '}';
     }
+    
 public void llenarRevolver(){
  
     Random revolver = new Random();
   this.posactual = revolver.nextInt(6);
   this.posagua = revolver.nextInt(6);
-  
+    System.out.println(posactual +" "+ posagua);
   
 }
  public Boolean mojar(){
      
-     return  this.posactual == this.posagua ;
+     return  (this.posactual == this.posagua) ;
      
  }
  public void siguienteChorro (){
-     if (this.posactual == 5) {
-         this.posactual = 0;
+     System.out.println(posactual);
+     if (posactual == 6 ) {
+         this.posactual =1 ;
          
      }else{
          this.posactual = this.posactual +1;
          
      }
+     System.out.println(posactual);
  }
  
 }

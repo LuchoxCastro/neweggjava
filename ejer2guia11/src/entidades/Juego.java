@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Juego {
 
     private Scanner leer = new Scanner(System.in);
-    private Revolver r;
+    private Revolver r = new Revolver();
     private ArrayList<Jugador> Jugadores = new ArrayList();
 
     public void llenarJuego() {
@@ -32,12 +32,14 @@ public class Juego {
             Jugador jug1 = new Jugador(id);
             Jugadores.add(jug1);
             id++;
+            System.out.println(" Los jugadores son " + jug1  );
 
         }
-        r.llenarRevolver();
+       
        
          this.r = new Revolver();
-          this.Jugadores = Jugadores;
+         r.llenarRevolver();
+          this.Jugadores = this.Jugadores;
          
     }
 
@@ -48,12 +50,12 @@ public class Juego {
 
             for (Jugador Jugadore : Jugadores) {
 
-                Jugadore.disparo(r, Jugadore);
+                Jugadore.disparo( r , Jugadore);
 
                 System.out.println("continua el siguienter participante " + Jugadore.getNombrejugador());
 
                 if (Jugadore.isMojado()) {
-                    System.out.println("final del juego " + Jugadore.getNombrejugador() + "fue mojado");
+                    System.out.println("final del juego " + Jugadore.getNombrejugador() + " fue mojado");
                     exit = false;
                     break;
                 } else {

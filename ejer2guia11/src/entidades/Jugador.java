@@ -27,7 +27,8 @@ public class Jugador {
 
     }
 
-    public void disparo(Revolver r, Jugador j1) {
+    public void disparo(Revolver r,Jugador j1 ) {
+     
         j1.setMojado(r.mojar());
         r.siguienteChorro();
 
@@ -61,8 +62,13 @@ public class Jugador {
         return mojado;
     }
 
-    public void setMojado(boolean mojado) {
-        this.mojado = mojado;
+    public void setMojado(boolean moja) {
+        this.mojado = moja;
+    }
+
+    @Override
+    public String toString() {
+        return ( " nombrejugador " + nombrejugador   );
     }
 
 }
