@@ -12,21 +12,20 @@ import java.util.ArrayList;
  * @author Hogar
  */
 public class Baraja {
-private ArrayList<Carta> cartas = new ArrayList();
- 
+private ArrayList<Carta> mazo = new ArrayList();
+
     public Baraja() {
-        this.cartas = new ArrayList();
-        
     }
 
-    public ArrayList<Carta> getCartas() {
-        return cartas;
+    public ArrayList<Carta> getMazo() {
+        return mazo;
     }
 
-    public void setCartas(ArrayList<Carta> cartas) {
-        this.cartas = cartas;
+    public void setMazo(ArrayList<Carta> mazo) {
+        this.mazo = mazo;
     }
-  
+ 
+ 
    
     
    

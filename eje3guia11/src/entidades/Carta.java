@@ -21,6 +21,10 @@ public class Carta {
         this.numero = numero;
     }
 
+    public Carta(int i, String palo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getPalo() {
         return Palo;
     }
