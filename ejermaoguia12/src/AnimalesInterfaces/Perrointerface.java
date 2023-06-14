@@ -9,7 +9,7 @@ package AnimalesInterfaces;
  *
  * @author Hogar
  */
-public class Perrointerface {
-    
+public interface Perrointerface  {
+    public void hacerRuido();
     
 }

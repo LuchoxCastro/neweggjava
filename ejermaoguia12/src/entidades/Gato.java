@@ -5,22 +5,25 @@
  */
 package entidades;
 
+import AnimalesInterfaces.Perrointerface;
+
 /**
  *
  * @author Hogar
  */
-public class Gato extends Animal {
-//    public Gato() {
-//    
-//}
+public class Gato implements Perrointerface {
+    public Gato() {
+    
+}
 
+   
     @Override
     public void hacerRuido() {
         System.out.println("miaoo");
     }
-
-    public Gato(String nombre, String alimento, Integer edad, String raza) {
-        super(nombre, alimento, edad, raza);
-    }
-     
+//
+//    public Gato(String nombre, String alimento, Integer edad, String raza) {
+//        super(nombre, alimento, edad, raza);
+//    }
+//     
 }

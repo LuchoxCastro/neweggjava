@@ -15,32 +15,32 @@ package entidades;
  *
  * @author Hogar
  */
-public class Animal {
-    //protected String saludo;
-protected String nombre;
-protected String alimento;
-protected Integer edad; 
-protected String raza;
-
-    
-    
-    
-    public Animal() {
-    }
-     public void hacerRuido(){
-         System.out.println("hola");
-         
-     }
-     public void alimentar(){
-         System.out.println(alimento);
-         
-     }
-
-    public Animal(String nombre, String alimento, Integer edad, String raza) {
-        this.nombre = nombre;
-        this.alimento = alimento;
-        this.edad = edad;
-        this.raza = raza;
-    }
-     
-}
+//public class Animal {
+//    //protected String saludo;
+//protected String nombre;
+//protected String alimento;
+//protected Integer edad; 
+//protected String raza;
+//
+//    
+//    
+//    
+//    public Animal() {
+//    }
+//     public void hacerRuido(){
+//         System.out.println("hola");
+//         
+//     }
+//     public void alimentar(){
+//         System.out.println(alimento);
+//         
+//     }
+//
+//    public Animal(String nombre, String alimento, Integer edad, String raza) {
+//        this.nombre = nombre;
+//        this.alimento = alimento;
+//        this.edad = edad;
+//        this.raza = raza;
+//    }
+//     
+//}
