@@ -132,6 +132,7 @@ public class Electrodomesticos {
     
     public void comprovarConsumoEnergetico(char letra){
         
+        
     }
     
 }
