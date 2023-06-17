@@ -86,12 +86,12 @@ public class Electrodomesticos {
     protected String color;
     protected int precio;
     protected char consumoEnergatico;
-    protected boolean peso;
+    protected double peso;
 
     public Electrodomesticos() {
     }
 
-    public Electrodomesticos(String color, int precio, char consumoEnergatico, boolean peso) {
+    public Electrodomesticos(String color, int precio, char consumoEnergatico, double peso) {
         this.color = color;
         this.precio = precio;
         this.consumoEnergatico = consumoEnergatico;
@@ -122,17 +122,15 @@ public class Electrodomesticos {
         this.consumoEnergatico = consumoEnergatico;
     }
 
-    public boolean isPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(boolean peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
+
     
-    public void comprovarConsumoEnergetico(char letra){
-        
-        
-    }
+   
     
 }
