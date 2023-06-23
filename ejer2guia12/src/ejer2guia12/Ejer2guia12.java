@@ -5,6 +5,8 @@
  */
 package ejer2guia12;
 
+import ElectrodomesticosServicio.LavadoraService;
+
 /**
  *
  * @author Hogar
@@ -15,7 +17,12 @@ public class Ejer2guia12 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+LavadoraService lavador = new LavadoraService();
+lavador.crearLavadora();
+
+        
+        
+
     }
     
 }

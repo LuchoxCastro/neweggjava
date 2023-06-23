@@ -16,8 +16,8 @@ import java.util.Scanner;
 //sino es correcta usara la letra F por defecto. Este método se debe invocar al crear el
 //objeto y no será visible.
 public class ElectrodomesticoService {
-
-    Electrodomesticos electro1 = new Electrodomesticos();
+ protected Scanner leer = new Scanner(System.in);
+   private Electrodomesticos electro1 = new Electrodomesticos();
 
     protected void comprovarConsumoEnergetico() {
 
@@ -55,7 +55,7 @@ public class ElectrodomesticoService {
 //precio se le da un valor base de $1000.
 
     public Electrodomesticos crearElectrodomestico() {
-        Scanner leer = new Scanner(System.in);
+       
         System.out.println("ingrese el color del electrodomestico");
         electro1.setColor(leer.next());
         comprobarColor();
