@@ -22,7 +22,7 @@ public class LavadoraService extends ElectrodomesticoService {
     public void crearLavadora() {
         
        
-        
+        System.out.println("seccion lavadoras");
         Electrodomesticos E1 = crearElectrodomestico();
         System.out.println("ingrese la carga en kilogramos");
         Lav1.setCarga(leer.nextInt());
@@ -46,7 +46,7 @@ public class LavadoraService extends ElectrodomesticoService {
     public double precioFinalLav() {
         
         Lav1.setPrecio(super.precioFinal());
-        System.out.println(Lav1.getPrecio());
+        //System.out.println(Lav1.getPrecio());
         if (Lav1.getCarga() > 30) {
             
             Lav1.setPrecio(Lav1.getPrecio() + 500);
